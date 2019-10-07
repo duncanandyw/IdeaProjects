@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-07T06:58:59" hostname="TheBest" time="17.607">
+  <properties/>
+  <testcase name="openCalculator" classname="CalculatorTest" time="17.607"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Oct 06, 2019 11:58:59 PM com.codeborne.selenide.drivercommands.LazyDriver getAndCheckWebDriver
+INFO: No webdriver is bound to current thread: 12 - let's create a new webdriver
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Oct 06, 2019 11:58:59 PM java.util.prefs.WindowsPreferences <init>
+WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
+Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 8610
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1570431544.019][WARNING]: Timed out connecting to Chrome, retrying...
+Oct 06, 2019 11:59:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Oct 06, 2019 11:59:06 PM com.codeborne.selenide.webdriver.BrowserResizer adjustBrowserSize
+INFO: Set browser size to 1366x768
+[1570431548.131][WARNING]: Timed out connecting to Chrome, retrying...
+Oct 06, 2019 11:59:10 PM com.codeborne.selenide.webdriver.WebDriverFactory logBrowserVersion
+INFO: BrowserName=chrome Version=77.0.3865.90 Platform=XP
+Oct 06, 2019 11:59:10 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
+INFO: Selenide v. 5.3.1
+Oct 06, 2019 11:59:10 PM com.codeborne.selenide.webdriver.WebDriverFactory logSeleniumInfo
+INFO: Selenium WebDriver v. 3.141.59 build time: 2018-11-14T08:17:03
+Oct 06, 2019 11:59:10 PM com.codeborne.selenide.drivercommands.CreateDriverCommand createDriver
+INFO: Create webdriver in current thread 12: ChromeDriver -> ChromeDriver: chrome on XP (47f57f236d9ebed3aa548cbcf59294f1)
+]]></system-err>
+</testsuite>

@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'com.codeborne:selenide:5.3.1'
+}
+
+task chrome(type: Test) {
+    systemProperties['selenide.browser'] = 'chrome'
+    systemProperties['selenide.headless'] = 'true'
+}
+
+task firefox(type: Test) {
+    systemProperties['selenide.browser'] = 'firefox'
+    systemProperties['selenide.headless'] = 'true'
+}
