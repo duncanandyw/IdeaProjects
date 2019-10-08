@@ -9,8 +9,12 @@ import static com.codeborne.selenide.Selenide.sleep;
 public class CalculatorTest {
     @Test
     public void openCalculator() {
-        System.setProperty("selenide.browser", "Chrome");
-//        System.setProperty("selenide.browser", "Firefox");
+        // choose our browser for testing
+        // this must be changed when we run different headless tests also
+//        System.setProperty("selenide.browser", "Chrome");
+//        System.err.println("*** Using Chrome ***");
+        System.setProperty("selenide.browser", "Firefox");
+        System.err.println("*** Using Firefox ***");
 
         // open our URL
         open("https://duffmanns.github.io/calc-test/calculator/app/index.html");

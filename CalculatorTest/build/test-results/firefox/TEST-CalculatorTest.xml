@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-07T06:04:21" hostname="TheBest" time="30.712">
+<testsuite name="CalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-08T01:22:13" hostname="TheBest" time="29.182">
   <properties/>
-  <testcase name="openCalculator" classname="CalculatorTest" time="30.712"/>
+  <testcase name="openCalculator" classname="CalculatorTest" time="29.182"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Oct 06, 2019 11:04:21 PM com.codeborne.selenide.drivercommands.LazyDriver getAndCheckWebDriver
+  <system-err><![CDATA[*** Using Firefox ***
+Oct 07, 2019 6:22:13 PM com.codeborne.selenide.drivercommands.LazyDriver getAndCheckWebDriver
 INFO: No webdriver is bound to current thread: 12 - let's create a new webdriver
 SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Oct 06, 2019 11:04:21 PM java.util.prefs.WindowsPreferences <init>
+Oct 07, 2019 6:22:13 PM java.util.prefs.WindowsPreferences <init>
 WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
-Oct 06, 2019 11:04:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Oct 07, 2019 6:22:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Oct 06, 2019 11:04:29 PM com.codeborne.selenide.webdriver.BrowserResizer adjustBrowserSize
+Oct 07, 2019 6:22:21 PM com.codeborne.selenide.webdriver.BrowserResizer adjustBrowserSize
 INFO: Set browser size to 1366x768
-Oct 06, 2019 11:04:29 PM com.codeborne.selenide.webdriver.WebDriverFactory logBrowserVersion
+Oct 07, 2019 6:22:21 PM com.codeborne.selenide.webdriver.WebDriverFactory logBrowserVersion
 INFO: BrowserName=firefox Version=69.0.2 Platform=WINDOWS
-Oct 06, 2019 11:04:29 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
+Oct 07, 2019 6:22:21 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
 INFO: Selenide v. 5.3.1
-Oct 06, 2019 11:04:29 PM com.codeborne.selenide.webdriver.WebDriverFactory logSeleniumInfo
+Oct 07, 2019 6:22:21 PM com.codeborne.selenide.webdriver.WebDriverFactory logSeleniumInfo
 INFO: Selenium WebDriver v. 3.141.59 build time: 2018-11-14T08:17:03
-Oct 06, 2019 11:04:29 PM com.codeborne.selenide.drivercommands.CreateDriverCommand createDriver
-INFO: Create webdriver in current thread 12: FirefoxDriver -> FirefoxDriver: firefox on WINDOWS (a738b8b6-c11c-4282-adaf-f7158f72afca)
+Oct 07, 2019 6:22:21 PM com.codeborne.selenide.drivercommands.CreateDriverCommand createDriver
+INFO: Create webdriver in current thread 12: FirefoxDriver -> FirefoxDriver: firefox on WINDOWS (49a4fda9-1b60-4372-9c83-a0a5f0aed6e6)
 ]]></system-err>
 </testsuite>
