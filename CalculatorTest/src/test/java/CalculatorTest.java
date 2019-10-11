@@ -19,7 +19,7 @@ public class CalculatorTest {
 
         // open our URL
         open("https://duffmanns.github.io/calc-test/calculator/app/index.html");
-        // verify the correct URL loaded
+        // verify the correct URL loaded, by checking our page title
         assert(title().equals("Calculator"));
 
         // TODO:
