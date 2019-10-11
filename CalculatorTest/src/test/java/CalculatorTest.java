@@ -1,13 +1,13 @@
-import com.codeborne.selenide.Condition;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.*;
+
+// import org.junit.Test;
 
 public class CalculatorTest {
-    @Test
+
+    @Test(alwaysRun = true)
     public void openCalculator() {
         // choose our browser for testing
         // this must be changed when we run different headless tests also
@@ -19,16 +19,23 @@ public class CalculatorTest {
 
         // open our URL
         open("https://duffmanns.github.io/calc-test/calculator/app/index.html");
-        // verify the correct URL (not working)
-//        $("head > title").shouldBe(text("Calculator"));
-//        $("head > title").shouldHave(Condition.text("Calculator"));
+        // verify the correct URL loaded
+        assert(title().equals("Calculator"));
+
         // TODO:
-        // verify elements ... since title verify isn't working
+        // verify elements of calculator
+        // add more incorrect input tests
+        // methods for repeated code
 
+    }
 
+    @Test(alwaysRun = true, dependsOnMethods = "openCalculator")
+    public void simpleAddition () {
         // A. Simple Addition
         // 1. 1 + 3
 
+        // clear our output
+        $("#clear").click();
         // verify our calculator shows zero
         $("#display > div").shouldBe(text("0"));
 
@@ -40,7 +47,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 1 to get plus
         // click on the plus button
-        $("#divide",1).click();
+        $("#divide", 1).click();
         // verify the number one still shows (memory was empty)
         $("#display > div").shouldBe(text("1"));
 
@@ -69,7 +76,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 1 to get plus
         // click on the plus button
-        $("#divide",1).click();
+        $("#divide", 1).click();
         // verify the number five still shows (memory was empty)
         $("#display > div").shouldBe(text("5"));
 
@@ -98,7 +105,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 1 to get plus
         // click on the plus button
-        $("#divide",1).click();
+        $("#divide", 1).click();
         // verify the number three still shows (memory was empty)
         $("#display > div").shouldBe(text("3"));
 
@@ -127,7 +134,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 1 to get plus
         // click on the plus button
-        $("#divide",1).click();
+        $("#divide", 1).click();
         // verify the number one still shows (memory was empty)
         $("#display > div").shouldBe(text("1"));
 
@@ -139,7 +146,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 1 to get plus
         // click on the plus button
-        $("#divide",1).click();
+        $("#divide", 1).click();
         // verify the number four now shows (we have added to our total)
         // since 1 + 3 = 4
         $("#display > div").shouldBe(text("4"));
@@ -152,7 +159,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 1 to get plus
         // click on the plus button
-        $("#divide",1).click();
+        $("#divide", 1).click();
         // verify the number nine now shows (we have added to our total)
         // since 1 + 3 + 5 = 9
         $("#display > div").shouldBe(text("9"));
@@ -165,7 +172,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 1 to get plus
         // click on the plus button
-        $("#divide",1).click();
+        $("#divide", 1).click();
         // verify the number fifteen now shows (we have added to our total)
         // since 1 + 3 + 5 + 6 = 15
         $("#display > div").shouldBe(text("15"));
@@ -178,7 +185,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 1 to get plus
         // click on the plus button
-        $("#divide",1).click();
+        $("#divide", 1).click();
         // verify the number eighteen now shows (we have added to our total)
         // since 1 + 3 + 5 + 6 + 3 = 18
         $("#display > div").shouldBe(text("18"));
@@ -193,7 +200,10 @@ public class CalculatorTest {
         // verify the number twenty-five now shows (we have added to our total)
         // since 1 + 3 + 5 + 6 + 3 + 7 = 25
         $("#display > div").shouldBe(text("25"));
+    }
 
+    @Test(alwaysRun = true, dependsOnMethods = "openCalculator")
+    public void simpleDivision() {
         // B. Simple Division
         // 1. 5 / 1
 
@@ -210,7 +220,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 0 to get division
         // click on the divide button
-        $("#divide",0).click();
+        $("#divide", 0).click();
         // verify the number five still shows (memory was empty)
         $("#display > div").shouldBe(text("5"));
 
@@ -239,7 +249,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 0 to get division
         // click on the divide button
-        $("#divide",0).click();
+        $("#divide", 0).click();
         // verify the number six still shows (memory was empty)
         $("#display > div").shouldBe(text("6"));
 
@@ -278,7 +288,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 0 to get division
         // click on the divide button
-        $("#divide",0).click();
+        $("#divide", 0).click();
         // verify the number one hundred still shows (memory was empty)
         $("#display > div").shouldBe(text("100"));
 
@@ -307,7 +317,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 0 to get division
         // click on the divide button
-        $("#divide",0).click();
+        $("#divide", 0).click();
         // verify the number zero still shows (memory was empty)
         $("#display > div").shouldBe(text("0"));
 
@@ -336,7 +346,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 0 to get division
         // click on the divide button
-        $("#divide",0).click();
+        $("#divide", 0).click();
         // verify the number four still shows (memory was empty)
         $("#display > div").shouldBe(text("4"));
 
@@ -349,7 +359,10 @@ public class CalculatorTest {
         $("#equals").click();
         // verify the text "Error" shows, as 4 / 0 = Error
         $("#display > div").shouldBe(text("Error"));
+    }
 
+    @Test(alwaysRun = true, dependsOnMethods = "openCalculator")
+    public void someDecimals() {
         // C. Decimals
         // 1. 0.5 + 2.65354
 
@@ -376,7 +389,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 1 to get plus
         // click on the plus button
-        $("#divide",1).click();
+        $("#divide", 1).click();
         // verify the number zero point five still shows (memory was empty)
         $("#display > div").shouldBe(text("0.5"));
 
@@ -475,7 +488,7 @@ public class CalculatorTest {
         // for some reason the divide and plus button
         // both use #divide selector, so we use index 0 to get division
         // click on the divide button
-        $("#divide",0).click();
+        $("#divide", 0).click();
         // verify the number one still shows (memory was correct)
         $("#display > div").shouldBe(text("1"));
 
@@ -492,5 +505,4 @@ public class CalculatorTest {
         // left for debugging
 //        sleep(3000);
     }
-
 }

@@ -11,16 +11,33 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
     testCompile 'com.codeborne:selenide:5.3.1'
 }
 
+test {
+    useTestNG() {
+        systemProperties['selenide.browser'] = 'chrome'
+    }
+}
+
+//task uitest(type: Test) {
+//    useTestNG() {
+//        systemProperties['selenide.browser'] = 'chrome'
+//    }
+//}
+
 task chrome(type: Test) {
-    systemProperties['selenide.browser'] = 'chrome'
-    systemProperties['selenide.headless'] = 'true'
+    useTestNG() {
+        systemProperties['selenide.browser'] = 'chrome'
+        systemProperties['selenide.headless'] = 'true'
+    }
 }
 
 task firefox(type: Test) {
-    systemProperties['selenide.browser'] = 'firefox'
-    systemProperties['selenide.headless'] = 'true'
+    useTestNG() {
+        systemProperties['selenide.browser'] = 'firefox'
+        systemProperties['selenide.headless'] = 'true'
+    }
 }
