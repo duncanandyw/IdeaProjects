@@ -33,26 +33,47 @@ Clears the scoreboard and returns a JSON showing the results of this action.
 Below are some sample curl commands / output.  Please note that using reset has no visible output, but the results can be viewed using the score endpoint.
 
 curl http://localhost:8080/choices --request GET
+
 [{"id":1,"name":"rock"},{"id":2,"name":"paper"},{"id":3,"name":"scissors"},{"id":4,"name":"lizard"},{"id":5,"name":"spock"}]
+
 curl http://localhost:8080/choice --request GET
+
 {"id":5,"name":"spock"}
+
 curl http://localhost:8080/reset --request GET
 
+
 curl http://localhost:8080/score --request GET
+
 {"player":0,"computer":0,"ties":0}
+
 curl -d "{\"player\":1}" -H "Content-Type: application/json" http://localhost:8080/play --request POST
+
 {"results":"tie","player":1,"computer":1}
+
 curl -d "{\"player\":2}" -H "Content-Type: application/json" http://localhost:8080/play --request POST
+
 {"results":"lose","player":2,"computer":3}
+
 curl -d "{\"player\":3}" -H "Content-Type: application/json" http://localhost:8080/play --request POST
+
 {"results":"tie","player":3,"computer":3}
+
 curl -d "{\"player\":4}" -H "Content-Type: application/json" http://localhost:8080/play --request POST
+
 {"results":"win","player":4,"computer":5}
+
 curl -d "{\"player\":5}" -H "Content-Type: application/json" http://localhost:8080/play --request POST
+
 {"results":"win","player":5,"computer":1}
-curl http://localhost:8080/score --request GET
-{"player":2,"computer":1,"ties":2}
-curl http://localhost:8080/reset --request GET
 
 curl http://localhost:8080/score --request GET
+
+{"player":2,"computer":1,"ties":2}
+
+curl http://localhost:8080/reset --request GET
+
+
+curl http://localhost:8080/score --request GET
+
 {"player":0,"computer":0,"ties":0}

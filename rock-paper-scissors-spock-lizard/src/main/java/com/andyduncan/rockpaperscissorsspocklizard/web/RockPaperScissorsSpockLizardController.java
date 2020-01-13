@@ -249,8 +249,7 @@ public class RockPaperScissorsSpockLizardController {
 
 // adapted from
 // https://stackoverflow.com/questions/50223891/how-to-extract-response-header-status-code-from-spring-5-webclient-clientrespo/50403667
-// this would be faster, easier and cleaner with a local random number generator, not subject to
-// network latency effects, but requirements indicated using the remote endpoint
+// network latency?  requirements?
     public BodyResponse retrieveRandom(BodyResponse bodyResponse) {
 
         Mono<ClientResponse> clientResponse = WebClient.builder().build()
